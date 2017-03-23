@@ -4,6 +4,7 @@ class CreateChoices < ActiveRecord::Migration[5.0]
       t.integer :panel_id
       t.integer :path_to
       t.string :body_text
+      t.integer :player_id
 
       t.timestamps
     end
