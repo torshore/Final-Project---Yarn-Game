@@ -12,10 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20170323183804) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "choices", force: :cascade do |t|
     t.integer  "panel_id"
     t.integer  "path_to"
-    t.text     "body_text"
+    t.string   "body_text"
+    t.integer  "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -23,38 +27,35 @@ ActiveRecord::Schema.define(version: 20170323183804) do
   create_table "panels", force: :cascade do |t|
     t.integer  "story_id"
     t.text     "image"
-    t.text     "body_text"
-    t.integer  "active_player"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "body_text"
+    t.integer  "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "players", force: :cascade do |t|
-    t.text     "story_id"
+    t.integer  "story_id"
     t.text     "art"
-    t.integer  "player_number"
+    t.integer  "player_ordinal_number"
     t.text     "name"
-    t.integer  "panel_id"
-    t.integer  "choice_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "stories", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "title"
     t.text     "tagline"
-    t.integer  "panels"
-    t.integer  "number_players"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "number_of_players"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.text     "username"
     t.text     "email"
     t.text     "password"
-    t.string   "avatar_url"
+    t.text     "avatar_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
