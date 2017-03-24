@@ -2,9 +2,9 @@ class CreatePanels < ActiveRecord::Migration[5.0]
   def change
     create_table :panels do |t|
       t.integer :story_id
-      t.string :image
+      t.text :image
       t.string :body_text
-      t.integer :active_player
+      t.integer :player_id
 
       t.timestamps
     end
