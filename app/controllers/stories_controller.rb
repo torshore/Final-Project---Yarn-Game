@@ -1,4 +1,14 @@
 class StoriesController < ApplicationController
+
+
+  def new
+
+  end
+
+  def create
+
+  end
+
   def index
     stories = Story.all
       render json: {status: 'SUCCESS', message: 'Loaded all stories', data: stories}, status: :ok
