@@ -43,6 +43,12 @@ Panel.create(story_id: 1,
              player_id: 1
              )
 
+Panel.create(story_id: 1,
+             image: "https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg",
+             body_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique sollicitudin luctus. Ut diam libero, maximus vitae consequat at, tristique sodales massa. Vestibulum viverra tincidunt dui, vitae ultricies diam sodales varius. Phasellus blandit tortor nisi, in dapibus leo hendrerit in.",
+             player_id: 1
+             )
+
 Panel.create(story_id: 2,
              image: "http://www.myabandonware.com/media/screenshots/j/james-clavells-shogun-gp/james-clavells-shogun_7.gif",
              body_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique sollicitudin luctus. Ut diam libero, maximus vitae consequat at, tristique sodales massa. Vestibulum viverra tincidunt dui, vitae ultricies diam sodales varius. Phasellus blandit tortor nisi, in dapibus leo hendrerit in.",
@@ -50,11 +56,16 @@ Panel.create(story_id: 2,
              )
 
 
-
 Player.create(story_id: 2,
               art: "http://www.coverbrowser.com/image/misc-games/3956-1.jpg",
               player_ordinal_number: 1,
               name: "Anjin-san"
+              )
+
+Choice.create(panel_id: 1,
+              path_to: 2,
+              body_text: "Lorem Ipsum",
+              player_id: 1
               )
 
 # This file should contain all the record creation needed to seed the database with its default values.

@@ -1,11 +1,15 @@
 class PanelsController < ApplicationController
   def index
-    panels = Panel.all
-        render json: {status: 'SUCCESS', message: 'Loaded all panels', data: panels}, status: :ok
+    story = Story.find(params[:story_id])
+    @panels = story.panels
+        render json: {status: 'SUCCESS', message: 'Loaded all panels', data: @panels}, status: :ok
   end
 
   def show
-    panel = Panel.find(params[:id])
-      render json: {status: 'SUCCESS', message: 'Loaded panel', data: panel}, status: :ok
+    story = Story.find(params[:story_id])
+    @panel = story.panels.find(params[:id])
+      render json: {status: 'SUCCESS', message: 'Loaded panel', data: @panel}, status: :ok
   end
+
+
 end
