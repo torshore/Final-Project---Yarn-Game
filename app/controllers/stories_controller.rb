@@ -6,7 +6,11 @@ class StoriesController < ApplicationController
   end
 
   def create
+    @story = Story.find(params[:id])
+  end
 
+  def destroy
+    story = Story.find(params[:id])
   end
 
   def index
