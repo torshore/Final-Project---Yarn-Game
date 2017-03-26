@@ -5,7 +5,13 @@ class PlayersController < ApplicationController
   end
 
   def create
+      story = Story.find(params[:story_id])
+      @player = story.players.find(params[:id])
+  end
 
+  def destroy
+      story = Story.find(params[:story_id])
+      @player = story.players.find(params[:id])
   end
 
   def index

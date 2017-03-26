@@ -5,7 +5,13 @@ class ChoicesController < ApplicationController
   end
 
   def create
+    panel = Panel.find(params[:panel_id])
+    @choice = panel.choices.find(params[:id])
+  end
 
+  def destroy
+    panel = Panel.find(params[:panel_id])
+    @choice = panel.choices.find(params[:id])
   end
 
   def index
