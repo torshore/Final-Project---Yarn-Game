@@ -1,4 +1,18 @@
 class PanelsController < ApplicationController
+
+  def new
+
+  end
+
+  def create
+    story = Story.find(params[:story_id])
+    @panel = story.panels.find(params[:id])
+  end
+
+  def destroy
+    story = Story.find(params[:story_id])
+    @panel = story.panels.find(params[:id])  end
+
   def index
     story = Story.find(params[:story_id])
     @panels = story.panels
