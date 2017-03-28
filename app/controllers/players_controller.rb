@@ -17,11 +17,11 @@ class PlayersController < ApplicationController
   def index
     story = Story.find(params[:story_id])
     @players = story.players
-        render json: {status: 'SUCCESS', message: 'Loaded all players', players: @players}, status: :ok
+        render json: {status: 'SUCCESS', message: 'Loaded all players', data: @players}, status: :ok
   end
     def show
       story = Story.find(params[:story_id])
       @player = story.players.find(params[:id])
-        render json: {status: 'SUCCESS', message: 'Loaded player', player: @player}, status: :ok
+        render json: {status: 'SUCCESS', message: 'Loaded player', data: @player}, status: :ok
   end
 end
