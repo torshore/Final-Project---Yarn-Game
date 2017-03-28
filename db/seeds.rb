@@ -15,12 +15,14 @@ User.create(username: "example",
 Story.create!(user_id: 1,
              title: "Fahfrd and the Grey Mouser",
              tagline: "Classic Adventure!",
+             image:"https://d2lzb5v10mb0lj.cloudfront.net/covers/600/10/10686.jpg",
              number_of_players: 2
              )
 
 Story.create!(user_id: 2,
              title: "Shogun",
              tagline: "Battle for Japan",
+             image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Minamoto_no_Yoritomo.jpg/220px-Minamoto_no_Yoritomo.jpg",
              number_of_players: 1
              )
 

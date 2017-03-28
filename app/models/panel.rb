@@ -6,5 +6,5 @@ class Panel < ApplicationRecord
 
   validates :story_id, presence: true
   validates :player_id, presence: true
-  validates :body_text, { maximum: 2000 }
+  validates :body_text, length: { maximum: 2000 }
 end
