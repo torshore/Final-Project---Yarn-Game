@@ -8,5 +8,4 @@ class Story < ApplicationRecord
   validates :title, length: { maximum: 75 }
   validates :tagline, length: { maximum: 140 }
   validates :number_of_players, numericality: { less_than: 5}
-
 end
