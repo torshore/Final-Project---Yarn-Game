@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20170329015557) do
     t.integer  "panel_id"
     t.integer  "path_to"
     t.string   "body_text"
-    t.integer  "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,25 +27,14 @@ ActiveRecord::Schema.define(version: 20170329015557) do
     t.integer  "story_id"
     t.text     "image"
     t.string   "body_text"
-    t.integer  "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "players", force: :cascade do |t|
-    t.integer  "story_id"
-    t.text     "art"
-    t.integer  "player_ordinal_number"
-    t.text     "name"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
   end
 
   create_table "stories", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "title"
     t.text     "tagline"
-    t.integer  "number_of_players"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.text     "image"
