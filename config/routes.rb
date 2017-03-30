@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
 
   resources :stories do
-    resources :players
     resources :panels do
       resources :choices
     end

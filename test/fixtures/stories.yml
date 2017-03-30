@@ -5,11 +5,9 @@ one:
   title: MyText
   tagline: MyText
   image: MyText
-  number_of_players: 1
 
 two:
   user_id: 1
   title: MyText
   tagline: MyText
   image: MyText
-  number_of_players: 1
