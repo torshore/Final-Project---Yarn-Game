@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329015557) do
+ActiveRecord::Schema.define(version: 20170402012420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170329015557) do
     t.string   "body_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "story_id"
   end
 
   create_table "panels", force: :cascade do |t|
@@ -35,8 +36,8 @@ ActiveRecord::Schema.define(version: 20170329015557) do
     t.integer  "user_id"
     t.text     "title"
     t.text     "tagline"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text     "image"
     t.integer  "firstpanel"
   end
