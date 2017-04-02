@@ -4,6 +4,10 @@ class PanelsController < ApplicationController
 
   end
 
+  def update
+
+  end
+
   def create
     story = Story.find(params[:story_id])
     @panel = story.panels.find(params[:id])
