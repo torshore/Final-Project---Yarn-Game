@@ -7,9 +7,16 @@ Rails.application.routes.draw do
 
 
   resources :stories do
+    resources :choices do
+      collection do
+        get :list
+      end
+    end
     resources :panels do
       resources :choices
     end
 
   end
 end
+
+
