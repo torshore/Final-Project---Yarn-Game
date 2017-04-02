@@ -4,6 +4,11 @@ class ChoicesController < ApplicationController
 
   end
 
+  def list
+    @choices = Choice.where story_id: Story.find(params[:story_id])
+      render json: {status: 'SUCCESS', message: 'Loaded all choices', data: @choices}, status: :ok
+  end
+
   def create
     panel = Panel.find(params[:panel_id])
     @choice = panel.choices.find(params[:id])

@@ -68,6 +68,12 @@ Choice.create(panel_id: 2,
               body_text: "Flee",
               story_id: 1,
               )
+
+Choice.create(panel_id: 1,
+              path_to: 0,
+              body_text: "test",
+              story_id: 2,
+              )
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
