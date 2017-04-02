@@ -4,9 +4,10 @@ class ChoicesController < ApplicationController
 
   end
 
-  def list
-    @choices = Choice.where story_id: Story.find(params[:story_id])
-      render json: {status: 'SUCCESS', message: 'Loaded all choices', data: @choices}, status: :ok
+  def listrow
+    @rows = Choice.select(:id, :path_to, :panel_id).distinct.where story_id: Story.find(params[:story_id])
+
+    render json: {status: 'SUCCESS', message: 'Loaded all rows', data: @rows}, status: :ok
   end
 
   def create
