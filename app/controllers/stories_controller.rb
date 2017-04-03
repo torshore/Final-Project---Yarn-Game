@@ -6,6 +6,7 @@ class StoriesController < ApplicationController
   end
 
   def create
+
     @story = Story.new(story_params)
 
     @story.save
