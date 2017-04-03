@@ -6,7 +6,9 @@ class StoriesController < ApplicationController
   end
 
   def create
-    @story = Story.find(params[:id])
+    @story = Story.new(story_params)
+
+    @story.save
   end
 
   def destroy
@@ -22,4 +24,9 @@ class StoriesController < ApplicationController
     story = Story.find(params[:id])
       render json: {status: 'SUCCESS', message: 'Loaded story', data: story}, status: :ok
   end
+
+  private
+    def story_params
+      params.require(:story).permit(:title, :tagline, :image, :firstpanel)
+    end
 end
