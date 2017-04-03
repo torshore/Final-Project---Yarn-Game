@@ -33,22 +33,12 @@ ActiveRecord::Schema.define(version: 20170402012420) do
   end
 
   create_table "stories", force: :cascade do |t|
-    t.integer  "user_id"
     t.text     "title"
     t.text     "tagline"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text     "image"
     t.integer  "firstpanel"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.text     "username"
-    t.text     "email"
-    t.text     "password"
-    t.text     "avatar_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
