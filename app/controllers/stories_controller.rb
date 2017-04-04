@@ -14,6 +14,7 @@ class StoriesController < ApplicationController
       msg = {status: 'CREATED NEW STORY!', data: @story.id}
       format.json {render :json => msg}
       puts msg
+      puts @story.id
 
     end
 
