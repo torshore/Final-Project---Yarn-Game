@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402012420) do
+ActiveRecord::Schema.define(version: 20170404213356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,17 +19,19 @@ ActiveRecord::Schema.define(version: 20170402012420) do
     t.integer  "panel_id"
     t.integer  "path_to"
     t.string   "body_text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "story_id"
+    t.text     "panel_title"
   end
 
   create_table "panels", force: :cascade do |t|
     t.integer  "story_id"
     t.text     "image"
     t.string   "body_text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "panel_title"
   end
 
   create_table "stories", force: :cascade do |t|
