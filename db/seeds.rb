@@ -1,4 +1,3 @@
-
 Story.create!(title: "Fahfrd and the Grey Mouser",
              tagline: "Classic Adventure!",
              image:"https://d2lzb5v10mb0lj.cloudfront.net/covers/600/10/10686.jpg",
