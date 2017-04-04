@@ -43,15 +43,19 @@ class StoriesController < ApplicationController
 
     def create_records
       @panel1 = create_panel
-      @panel2 = create_panel
+      @panel2 = create_panel2
       create_choice
     end
 
     def create_panel
+      Panel.create(story_id: @story.id, image: @story.image, body_text: @story.title, panel_title: @story.title)
+    end
+
+    def create_panel2
       Panel.create(story_id: @story.id)
     end
 
     def create_choice
-      Choice.create(panel_id: @panel1.id, path_to: @panel2.id, story_id: @story.id)
+      Choice.create(panel_id: @panel1.id, path_to: @panel2.id, story_id: @story.id, panel_title: @story.title, body_text: "Start this Story!")
     end
 end
