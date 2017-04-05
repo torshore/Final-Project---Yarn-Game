@@ -40,7 +40,7 @@ Panel.create(story_id: 1,
 
 Panel.create(story_id: 2,
              image: "http://www.myabandonware.com/media/screenshots/j/james-clavells-shogun-gp/james-clavells-shogun_7.gif",
-             body_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique sollicitudin luctus. Ut diam libero, maximus vitae consequat at, tristique sodales massa. Vestibulum viverra tincidunt dui, vitae ultricies diam sodales varius. Phasellus blandit tortor nisi, in dapibus leo hendrerit in.",
+             body_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique sollicitudin luctus. Ut diam libero, maximus vitae consequat at, tristique sodales massa. Vestibulum viverra tincidunt dui, vitae ultricies diam sodales varius. Phasellus blandit tortor nisi, in dapibus leo hendrerit in."
              )
 
 Choice.create(panel_id: 1,
@@ -49,7 +49,9 @@ Choice.create(panel_id: 1,
               story_id: 1,
               panel_title: "An Enemy",
               index: 1,
-              index2: 2
+              index2: 2,
+              image: "https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg",
+              panel_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique sollicitudin luctus. Ut diam libero, maximus vitae consequat at, tristique sodales massa. Vestibulum viverra tincidunt dui, vitae ultricies diam sodales varius. Phasellus blandit tortor nisi, in dapibus leo hendrerit in."
               )
 
 Choice.create(panel_id: 2,
@@ -58,8 +60,9 @@ Choice.create(panel_id: 2,
               story_id: 1,
               panel_title: "Fight!",
               index: 2,
-              index2: 3
-              )
+              index2: 3,
+              image: "http://2.bp.blogspot.com/_tXIhwKxOXb8/TT7l0f88K-I/AAAAAAAAALc/R6E4ZLRKn1M/s1600/69622021.jpg",
+              panel_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique sollicitudin luctus. Ut diam libero, maximus vitae consequat at, tristique sodales massa. Vestibulum viverra tincidunt dui, vitae ultricies diam sodales varius. Phasellus blandit tortor nisi, in dapibus leo hendrerit in.")
 
 Choice.create(panel_id: 2,
               path_to: 4,
@@ -67,13 +70,15 @@ Choice.create(panel_id: 2,
               story_id: 1,
               panel_title: "Flee!",
               index: 2,
-              index2: 4
+              index2: 4,
+              image: "http://images.clipartpanda.com/girl-running-away-clipart-74058338.jpg",
+              panel_text: "You fled!"
               )
 
 Choice.create(panel_id: 1,
               path_to: 0,
               body_text: "test",
-              story_id: 2,
+              story_id: 2
               )
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
