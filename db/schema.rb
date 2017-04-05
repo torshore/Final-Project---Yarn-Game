@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405021536) do
+ActiveRecord::Schema.define(version: 20170405033244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170405021536) do
     t.integer  "story_id"
     t.text     "panel_title"
     t.integer  "index"
+    t.integer  "index2"
   end
 
   create_table "panels", force: :cascade do |t|

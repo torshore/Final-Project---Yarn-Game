@@ -48,7 +48,8 @@ Choice.create(panel_id: 1,
               body_text: "Lorem Ipsum",
               story_id: 1,
               panel_title: "An Enemy",
-              index: 1
+              index: 1,
+              index2: 2
               )
 
 Choice.create(panel_id: 2,
@@ -56,7 +57,8 @@ Choice.create(panel_id: 2,
               body_text: "Fight",
               story_id: 1,
               panel_title: "Fight!",
-              index: 2
+              index: 2,
+              index2: 3
               )
 
 Choice.create(panel_id: 2,
@@ -64,7 +66,8 @@ Choice.create(panel_id: 2,
               body_text: "Flee",
               story_id: 1,
               panel_title: "Flee!",
-              index: 2
+              index: 2,
+              index2: 4
               )
 
 Choice.create(panel_id: 1,
