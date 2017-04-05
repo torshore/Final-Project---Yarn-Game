@@ -19,6 +19,8 @@ class StoriesController < ApplicationController
 
     create_records
 
+    @story.update(firstpanel: @panel1.id)
+
   end
 
   def destroy
@@ -56,6 +58,6 @@ class StoriesController < ApplicationController
     end
 
     def create_choice
-      Choice.create(panel_id: @panel1.id, path_to: @panel2.id, story_id: @story.id, panel_title: @story.title, body_text: "Start this Story!", index: 1)
+      Choice.create(panel_id: @panel1.id, path_to: @panel2.id, story_id: @story.id, panel_title: @story.title, body_text: "Start this Story!", index: 1, index2: 2)
     end
 end
