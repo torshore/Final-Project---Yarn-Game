@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405033244) do
+ActiveRecord::Schema.define(version: 20170405151425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20170405033244) do
     t.text     "panel_title"
     t.integer  "index"
     t.integer  "index2"
+    t.text     "image"
+    t.string   "panel_text"
   end
 
   create_table "panels", force: :cascade do |t|
