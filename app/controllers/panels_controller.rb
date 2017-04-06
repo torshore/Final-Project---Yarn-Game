@@ -5,9 +5,8 @@ class PanelsController < ApplicationController
   end
 
   def update
-    @panel = Panel.update(panel_params)
-
-
+    @panel = Panel.find(panel_params[:id])
+    @panel.update(panel_params)
   end
 
   def create
@@ -32,7 +31,7 @@ class PanelsController < ApplicationController
 
     def panel_params
 
-    params.require(:panel).permit(:image, :body_text, :panel_title)
+    params.require(:panel).permit(:id, :image, :body_text, :panel_title, :story_id)
 
 
   end
