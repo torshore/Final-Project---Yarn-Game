@@ -5,7 +5,11 @@ class PanelsController < ApplicationController
   end
 
   def update
-
+    @story.save
+      respond_to do |format|
+      msg = {status: 'CREATED NEW PANEL!'}
+      format.json {render :json => msg}
+    end
   end
 
   def create
@@ -29,5 +33,8 @@ class PanelsController < ApplicationController
       render json: {status: 'SUCCESS', message: 'Loaded panel', data: @panel}, status: :ok
   end
 
-
+  def private
+    def story_params
+      params.require(:panel).permit(:story_id, :image, :body_text, :panel_title, :index)
+    end
 end
