@@ -13,15 +13,13 @@ class ChoicesController < ApplicationController
       format.json {render :json => msg}
 
     end
-
+    @currentpanelmax = Panel.where(story_id: @choice.story_id).maximum(:index)
     create_records
 
     @choice.update(path_to: @panel.id)
-    @previousmax = Choice.where(story_id: @choice.story_id).order("index DESC").first
-    @lastchoice = Choice.where(story_id: @choice.story_id).maximum(:index)
-
-    @choice.update(index: @lastchoice + 1)
-    @previousmax.update(index2: @choice[:index])
+    @lastchoice = Choice.where(story_id: @choice.story_id).maximum(:index2)
+    @choice.update(index2: @lastchoice + 1)
+    @choice.update(index: @currentpanelmax)
   end
 
   def listrow
@@ -52,6 +50,6 @@ class ChoicesController < ApplicationController
     end
 
     def create_records
-      @panel = Panel.create(story_id: @choice.story_id)
+      @panel = Panel.create(story_id: @choice.story_id, index: @currentpanelmax + 1)
     end
 end
