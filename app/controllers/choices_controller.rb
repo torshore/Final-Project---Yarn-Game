@@ -17,16 +17,16 @@ class ChoicesController < ApplicationController
     create_records
 
     @choice.update(path_to: @panel.id)
+    @previousmax = Choice.where(story_id: @choice.story_id).order("index DESC").first
+    @lastchoice = Choice.where(story_id: @choice.story_id).maximum(:index)
+
+    @choice.update(index: @lastchoice + 1)
+    @previousmax.update(index2: @choice[:index])
   end
 
   def listrow
     @rows = Choice.select(:id, :path_to, :panel_id, :panel_title, :index, :index2, :story_id, :image, :panel_text, :body_text).distinct.where story_id: Story.find(params[:story_id])
     render json: {status: 'SUCCESS', message: 'Loaded all rows', data: @rows}, status: :ok
-  end
-
-  def create
-    panel = Panel.find(params[:panel_id])
-    @choice = panel.choices.find(params[:id])
   end
 
   def destroy
