@@ -19,7 +19,6 @@ class ChoicesController < ApplicationController
     @choice.update(path_to: @panel.id)
     @lastchoice = Choice.where(story_id: @choice.story_id).maximum(:index2)
     @choice.update(index2: @lastchoice + 1)
-    @choice.update(index: @currentpanelmax)
   end
 
   def listrow
