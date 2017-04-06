@@ -5,7 +5,7 @@ class ChoicesController < ApplicationController
   end
 
   def listrow
-    @rows = Choice.select(:id, :path_to, :panel_id).distinct.where story_id: Story.find(params[:story_id])
+    @rows = Choice.select(:id, :path_to, :panel_id, :panel_title, :index, :index2, :story_id, :image, :panel_text).distinct.where story_id: Story.find(params[:story_id])
     render json: {status: 'SUCCESS', message: 'Loaded all rows', data: @rows}, status: :ok
   end
 

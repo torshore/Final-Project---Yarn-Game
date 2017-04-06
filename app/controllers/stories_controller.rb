@@ -20,6 +20,8 @@ class StoriesController < ApplicationController
 
     create_records
 
+    @story.update(firstpanel: @panel1.id)
+
   end
 
   def destroy
@@ -49,14 +51,14 @@ class StoriesController < ApplicationController
     end
 
     def create_panel
-      Panel.create(story_id: @story.id, image: @story.image, body_text: @story.title, panel_title: @story.title)
+      Panel.create(story_id: @story.id, image: @story.image, body_text: @story.title, panel_title: @story.title, index: 1)
     end
 
     def create_panel2
-      Panel.create(story_id: @story.id)
+      Panel.create(story_id: @story.id, index: 2)
     end
 
     def create_choice
-      Choice.create(panel_id: @panel1.id, path_to: @panel2.id, story_id: @story.id, panel_title: @story.title, body_text: "Start this Story!")
+      Choice.create(panel_id: @panel1.id, path_to: @panel2.id, story_id: @story.id, panel_title: @story.title, body_text: "Start this Story!", index: 1, index2: 2, image: @story.image, panel_text: @story.title)
     end
 end
