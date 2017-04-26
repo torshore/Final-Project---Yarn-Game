@@ -41,7 +41,7 @@ class StoriesController < ApplicationController
   private
 
     def story_params
-      params.require(:story).permit(:title, :tagline, :image, :firstpanel)
+      params.require(:story).permit(:title, :tagline, :image, :firstpanel, :id)
     end
 
     def create_records

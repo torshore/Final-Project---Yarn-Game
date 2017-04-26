@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :panels do
       resources :choices
     end
-
+    get '/panels/chartshow/:index', to: 'panels#chartshow'
   end
 end
 
