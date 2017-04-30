@@ -51,11 +51,11 @@ class StoriesController < ApplicationController
     end
 
     def create_panel
-      Panel.create(story_id: @story.id, image: @story.image, body_text: @story.title, panel_title: @story.title, index: 1)
+      Panel.create(story_id: @story.id, image: @story.image, body_text: @story.title, panel_title: @story.title, index: 1, image_height: "600px", image_width: "350px")
     end
 
     def create_panel2
-      Panel.create(story_id: @story.id, index: 2)
+      Panel.create(story_id: @story.id, index: 2, image_height: "600px", image_width: "350px")
     end
 
     def create_choice
