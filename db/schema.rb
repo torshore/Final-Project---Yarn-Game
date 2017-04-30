@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170413191759) do
+ActiveRecord::Schema.define(version: 20170430055230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,11 +36,13 @@ ActiveRecord::Schema.define(version: 20170413191759) do
   create_table "panels", force: :cascade do |t|
     t.integer  "story_id"
     t.string   "body_text"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.text     "panel_title"
     t.integer  "index"
     t.text     "image"
+    t.text     "image_height"
+    t.text     "image_width"
     t.index ["story_id"], name: "index_panels_on_story_id", using: :btree
   end
 
