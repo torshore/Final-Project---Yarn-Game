@@ -59,7 +59,7 @@ Choice.create(panel_id: 2,
               index: 2,
               index2: 3,
               image: "http://2.bp.blogspot.com/_tXIhwKxOXb8/TT7l0f88K-I/AAAAAAAAALc/R6E4ZLRKn1M/s1600/69622021.jpg",
-              panel_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique sollicitudin luctus. Ut diam libero, maximus vitae consequat at, tristique sodales massa. Vestibulum viverra tincidunt dui, vitae ultricies diam sodales varius. Phasellus blandit tortor nisi, in dapibus leo hendrerit in.")
+              panel_text: "You fought!")
 
 Choice.create(panel_id: 2,
               path_to: 4,

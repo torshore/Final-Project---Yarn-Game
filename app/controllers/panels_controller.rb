@@ -7,6 +7,8 @@ class PanelsController < ApplicationController
   def update
     @panel = Panel.find(panel_params[:id])
     @panel.update(panel_params)
+    @choice = Choice.where(path_to: @panel.id)
+    @choice.update(panel_text: @panel.body_text)
   end
 
   def create
