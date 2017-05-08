@@ -10,7 +10,11 @@ Panel.create(story_id: 1,
              panel_title: "Fahfrd and the Grey Mouser",
              index: 1,
              image_height: "600px",
-             image_width: "350px"
+             image_width: "350px",
+             body_text_height: "350px",
+             body_text_width: "260px",
+             body_text_position_x: 540,
+             body_text_position_y: -580
              )
 
 Panel.create(story_id: 1,
@@ -19,7 +23,11 @@ Panel.create(story_id: 1,
              panel_title: "An Enemy!",
              index: 2,
              image_height: "600px",
-             image_width: "350px"
+             image_width: "350px",
+             body_text_height: "350px",
+             body_text_width: "260px",
+             body_text_position_x: 540,
+             body_text_position_y: -580
              )
 
 Panel.create(story_id: 1,
@@ -28,7 +36,11 @@ Panel.create(story_id: 1,
              panel_title: "Fight",
              index: 3,
              image_height: "600px",
-             image_width: "350px"
+             image_width: "350px",
+             body_text_height: "350px",
+             body_text_width: "260px",
+             body_text_position_x: 540,
+             body_text_position_y: -580
              )
 
 Panel.create(story_id: 1,
@@ -37,7 +49,11 @@ Panel.create(story_id: 1,
              panel_title: "Flee",
              index: 4,
              image_height: "600px",
-             image_width: "350px"
+             image_width: "350px",
+             body_text_height: "350px",
+             body_text_width: "260px",
+             body_text_position_x: 540,
+             body_text_position_y: -580
              )
 
 Choice.create(panel_id: 1,
