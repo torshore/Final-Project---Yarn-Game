@@ -54,6 +54,6 @@ class ChoicesController < ApplicationController
     end
 
     def create_records
-      @panel = Panel.create(story_id: @choice.story_id, index: @currentpanelmax + 1, image_height: "600px", image_width: "350px")
+      @panel = Panel.create(story_id: @choice.story_id, index: @currentpanelmax + 1, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", body_text_position_x: 540, body_text_position_y: -580)
     end
 end
