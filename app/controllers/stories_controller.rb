@@ -55,7 +55,7 @@ class StoriesController < ApplicationController
     end
 
     def create_panel2
-      Panel.create(story_id: @story.id, index: 2, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", , body_text_position_x: 540, body_text_position_y: -580)
+      Panel.create(story_id: @story.id, index: 2, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", body_text_position_x: 540, body_text_position_y: -580)
     end
 
     def create_choice
