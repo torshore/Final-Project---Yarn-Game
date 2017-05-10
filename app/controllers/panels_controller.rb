@@ -32,8 +32,25 @@ class PanelsController < ApplicationController
   def destroy
     @panel = Panel.find(panel_params[:id])
     @choice = Choice.where(path_to: panel_params[:id])[0]
+
+    allchoices = Choice.where(story_id: panel_params[:story_id])
+    allchoices.each do |choice|
+      if choice.index2 > @choice.index2
+        choice.decrement!(:index2)
+      end
+    end
+
+    allpanels = Panel.where(story_id: panel_params[:story_id])
+    allpanels.each do |panel|
+      if panel[:index] > @panel[:index]
+        panel.decrement!(:index)
+      end
+    end
+
     @choice.destroy
     @panel.destroy
+
+
 
 
   end
