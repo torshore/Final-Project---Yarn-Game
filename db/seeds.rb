@@ -15,7 +15,8 @@ Panel.create(story_id: 1,
              body_text_width: "260px",
              body_text_position_x: 540,
              body_text_position_y: -580,
-             body_text_background_color: "white"
+             body_text_background_color: "white",
+             font_family: "Helvetica"
              )
 
 Panel.create(story_id: 1,
@@ -29,7 +30,8 @@ Panel.create(story_id: 1,
              body_text_width: "260px",
              body_text_position_x: 540,
              body_text_position_y: -580,
-             body_text_background_color: "white"
+             body_text_background_color: "white",
+             font_family: "Helvetica"
              )
 
 Panel.create(story_id: 1,
@@ -43,7 +45,8 @@ Panel.create(story_id: 1,
              body_text_width: "260px",
              body_text_position_x: 540,
              body_text_position_y: -580,
-             body_text_background_color: "white"
+             body_text_background_color: "white",
+             font_family: "Helvetica"
              )
 
 Panel.create(story_id: 1,
@@ -57,7 +60,8 @@ Panel.create(story_id: 1,
              body_text_width: "260px",
              body_text_position_x: 540,
              body_text_position_y: -580,
-             body_text_background_color: "white"
+             body_text_background_color: "white",
+             font_family: "Helvetica"
              )
 
 Choice.create(panel_id: 1,
