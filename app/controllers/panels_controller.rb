@@ -64,7 +64,7 @@ class PanelsController < ApplicationController
 
     def panel_params
 
-    params.require(:panel).permit(:id, :image, :body_text, :panel_title, :story_id, :index, :image_width, :image_height, :image_position_x, :image_position_y, :body_text_height, :body_text_width, :body_text_position_x, :body_text_position_y, :body_text_background_color)
+    params.require(:panel).permit(:id, :image, :body_text, :panel_title, :story_id, :index, :image_width, :image_height, :image_position_x, :image_position_y, :body_text_height, :body_text_width, :body_text_position_x, :body_text_position_y, :body_text_background_color, :a_value)
 
 
   end
