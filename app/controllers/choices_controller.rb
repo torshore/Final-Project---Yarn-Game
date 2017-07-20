@@ -18,7 +18,12 @@ class ChoicesController < ApplicationController
 
     @choice.update(path_to: @panel.id)
     @lastchoice = Choice.where(story_id: @choice.story_id).maximum(:index2)
-    @choice.update(index2: @lastchoice + 1)
+
+    if !@lastchoice
+      @choice.update(index2: 2)
+    else
+      @choice.update(index2: @lastchoice + 1)
+    end
   end
 
   def update
@@ -54,6 +59,6 @@ class ChoicesController < ApplicationController
     end
 
     def create_records
-      @panel = Panel.create(story_id: @choice.story_id, index: @currentpanelmax + 1, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", body_text_position_x: 540, body_text_position_y: -580, body_text_background_color: "#ffffff", aValue: 1)
+      @panel = Panel.create(story_id: @choice.story_id, index: @currentpanelmax + 1, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", body_text_position_x: 540, body_text_position_y: -580, body_text_background_color: "#ffffff", a_value: 1)
     end
 end
