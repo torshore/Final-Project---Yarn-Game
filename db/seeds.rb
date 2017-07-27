@@ -4,6 +4,12 @@ Story.create!(title: "Fahfrd and the Grey Mouser",
              firstpanel: 1
              )
 
+Story.create!(title: "Lord of the Rings",
+              tagline: "Battle for Middle Earth",
+              image: "http://wallpapercave.com/wp/EMdc6BA.jpg",
+              firstpanel: 5
+             )
+
 Panel.create(story_id: 1,
              image: "https://s-media-cache-ak0.pinimg.com/originals/c8/84/76/c88476a91f0084629ad5dbfcd9ab9335.jpg",
              body_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique sollicitudin luctus. Ut diam libero, maximus vitae consequat at, tristique sodales massa. Vestibulum viverra tincidunt dui, vitae ultricies diam sodales varius. Phasellus blandit tortor nisi, in dapibus leo hendrerit in.",
@@ -64,6 +70,21 @@ Panel.create(story_id: 1,
              a_value: 1
              )
 
+Panel.create(story_id: 2,
+             image: 'http://wallpapercave.com/wp/EMdc6BA.jpg',
+             body_text: "Three Rings for the Elven-kings under the sky, Seven for the Dwarf-lords in their halls of stone, Nine for Mortal Men doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor where the Shadows lie. One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them In the Land of Mordor where the Shadows lie.",
+             panel_title: "",
+             index: 1,
+             image_height: '600px',
+             image_width: '600px',
+             body_text_height: "350px",
+             body_text_width: "260px",
+             body_text_position_x: 540,
+             body_text_position_y: -580,
+             body_text_background_color: "#ffffff",
+             a_value: 1
+            )
+
 Choice.create(panel_id: 1,
               path_to: 2,
               body_text: "Lorem Ipsum",
@@ -96,6 +117,45 @@ Choice.create(panel_id: 2,
               panel_text: "You fled!"
               )
 
+Word.create(panel_id: 5,
+            index: 1,
+            content: "Three Rings for the Elven-kings under the sky,"
+            )
+
+Word.create(panel_id: 5,
+            index: 2,
+            content: "Seven for the Dwarf-lords in their halls of stone,"
+            )
+
+Word.create(panel_id: 5,
+            index: 3,
+            content: "Nine for Mortal Men doomed to die,"
+            )
+
+Word.create(panel_id: 5,
+            index: 4,
+            content: "One for the Dark Lord on his dark throne"
+            )
+
+Word.create(panel_id: 5,
+            index: 5,
+            content: "In the Land of Mordor where the Shadows lie."
+            )
+
+Word.create(panel_id: 5,
+            index: 6,
+            content: "One Ring to rule them all, One Ring to find them,"
+            )
+
+Word.create(panel_id: 5,
+            index: 7,
+            content: "One Ring to bring them all and in the darkness bind them"
+            )
+
+Word.create(panel_id: 5,
+            index: 8,
+            content: "In the Land of Mordor where the Shadows lie."
+            )
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).

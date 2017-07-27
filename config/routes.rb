@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   root to: 'stories#index'
   resources :users
 
-
+  resources :panels do
+    resources :words do
+    end
+  end
 
   resources :stories do
     resources :choices do
@@ -14,6 +17,7 @@ Rails.application.routes.draw do
     end
     resources :panels do
       resources :choices
+
     end
     get '/panels/chartshow/:index', to: 'panels#chartshow'
   end
