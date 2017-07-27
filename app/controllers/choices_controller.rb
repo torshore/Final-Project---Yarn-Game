@@ -24,6 +24,8 @@ class ChoicesController < ApplicationController
     else
       @choice.update(index2: @lastchoice + 1)
     end
+
+    Word.create(index: 1, panel_id: @panel.id, content: "")
   end
 
   def update

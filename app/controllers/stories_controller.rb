@@ -51,11 +51,13 @@ class StoriesController < ApplicationController
     end
 
     def create_panel
-      Panel.create(story_id: @story.id, image: @story.image, body_text: @story.title, panel_title: @story.title, index: 1, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", body_text_position_x: 540, body_text_position_y: -580, body_text_background_color: "rgba(255, 255, 255, 1)", aValue: 1)
+      @panel1 = Panel.create(story_id: @story.id, image: @story.image, panel_title: @story.title, index: 1, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", body_text_position_x: 540, body_text_position_y: -580, body_text_background_color: "#ffffff", a_value: 1.0)
+      Word.create(index: 1, panel_id: @panel1.id, content: "")
     end
 
     def create_panel2
-      Panel.create(story_id: @story.id, index: 2, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", body_text_position_x: 540, body_text_position_y: -580, body_text_background_color: "#ffffff", aValue: 1)
+      @panel2 = Panel.create(story_id: @story.id, index: 2, image_height: "600px", image_width: "350px", body_text_height: "350px", body_text_width: "260px", body_text_position_x: 540, body_text_position_y: -580, body_text_background_color: "#ffffff", a_value: 1.0)
+      Word.create(index: 1, panel_id: @panel2.id, content: "")
     end
 
     def create_choice
